@@ -8,7 +8,13 @@ import {OrderI} from "@/6-entities/Order/types";
 import {Card, Skeleton} from "antd";
 
 export const OrdersList: FC = () => {
-    const {data, isError, isLoading, error} = useQuery<OrderI[]>({
+    const {
+        data,
+        isError,
+        isSuccess,
+        isLoading,
+        error
+    } = useQuery<OrderI[]>({
         queryKey: ['orders'],
         queryFn: OrderServices.getOrdersList
     });
@@ -17,7 +23,7 @@ export const OrdersList: FC = () => {
         return (
             <div className={styles.gridContainer}>
                 <div className={styles.listClassName}>
-                    <Card style={{width: "547px", height:'328px'}}>
+                    <Card style={{width: "547px", height: '328px'}}>
                         <Skeleton/>
                     </Card>
                 </div>
@@ -32,7 +38,7 @@ export const OrdersList: FC = () => {
 
     return (
         <>
-            {data &&
+            {isSuccess &&
                 <VirtuosoGrid
                     className={styles.gridContainer}
                     data={data}
