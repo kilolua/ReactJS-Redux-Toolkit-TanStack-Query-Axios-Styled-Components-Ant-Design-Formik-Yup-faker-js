@@ -1,5 +1,7 @@
 import {faker} from '@faker-js/faker';
 import {OrderI} from "@/6-entities/Order/types";
+import {districts} from "@/7-shared/config/districts.ts";
+import {cities} from "@/7-shared/config/cities.ts";
 
 function createRandomOrder(): OrderI {
     const cargoLoadingDate = faker.date.soon({refDate: new Date()});
@@ -8,13 +10,13 @@ function createRandomOrder(): OrderI {
     const orderNumber = 'A' + faker.number.int({min: 1000000, max: 1999999})
     const intermediateDeliveryPointsCount = faker.number.int({min: 0, max: 10})
     const addressFrom = {
-        district: faker.location.state(),
-        city: faker.location.city()
+        district: faker.helpers.arrayElement(districts),
+        city: faker.helpers.arrayElement(cities)
     }
     const distance = faker.number.int({min: 100, max: 1000})
     const addressTo = {
-        district: faker.location.state(),
-        city: faker.location.city()
+        district: faker.helpers.arrayElement(districts),
+        city: faker.helpers.arrayElement(cities)
     }
 
     const description = {
@@ -31,6 +33,7 @@ function createRandomOrder(): OrderI {
         distance,
         intermediateDeliveryPointsCount,
         orderNumber,
+        cargoType:'Тент / полная',
         price,
         gsm,
         description,

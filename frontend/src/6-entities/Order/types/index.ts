@@ -1,4 +1,4 @@
-export interface orderAddressI {
+export interface OrderAddressI {
     district: string,
     city: string
 }
@@ -11,11 +11,12 @@ export interface orderDescriptionI {
 
 export interface OrderI {
     _id: string
-    addressFrom: orderAddressI
-    addressTo: orderAddressI
+    addressFrom: OrderAddressI
+    addressTo: OrderAddressI
     cargoLoadingDate: Date
     distance: number
     intermediateDeliveryPointsCount: number
+    cargoType:string
     orderNumber: string
     price: number
     gsm: number
