@@ -1,5 +1,4 @@
-import axios from "axios";
+import {FakerMock} from "@/mock";
 
-export const $api = axios.create({
-    baseURL:import.meta.env.VITE_BASE_URL
-})
+
+export const fakerMock = new FakerMock();
