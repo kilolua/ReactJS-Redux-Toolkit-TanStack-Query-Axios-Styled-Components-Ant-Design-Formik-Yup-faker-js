@@ -1,15 +1,10 @@
 import {FC} from "react";
-import {getOrders} from "@/mock";
-import {OrderCard} from "@/6-entities/Order";
-import styles from './style.module.css'
+import {OrdersList} from "@/4-widgets/ordersList/ui/OrdersList.tsx";
 
 export const OrdersPage: FC = () => {
-    const orders = getOrders();
     return (
-        <div className={styles.gridContainer}>
-            {orders.map((item) => (
-                <OrderCard {...item}/>
-            ))}
+        <div style={{width:'100%', height:'100vh'}}>
+            <OrdersList/>
         </div>
     );
 };

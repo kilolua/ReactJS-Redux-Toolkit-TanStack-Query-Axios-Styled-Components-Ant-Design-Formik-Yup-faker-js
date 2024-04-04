@@ -40,7 +40,7 @@ function createRandomOrder(): OrderI {
     };
 }
 
-export function getOrders() {
+export function getOrders():OrderI[] {
     const orders = [];
     for (let i = 0; i < 10; i++) {
         orders.push(createRandomOrder());
