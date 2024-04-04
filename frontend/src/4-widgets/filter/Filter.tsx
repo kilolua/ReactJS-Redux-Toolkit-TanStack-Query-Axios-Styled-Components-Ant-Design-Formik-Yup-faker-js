@@ -30,6 +30,7 @@ const Filter = () => {
             <form onSubmit={formik.handleSubmit}>
                 <div style={{display:'flex', flexDirection:'row'}}>
                     <CustomInput
+                        style={{transform:'translateX(5px)'}}
                         id='addressFrom'
                         list='addressFromList'
                         placeholder="Basic usage"
@@ -39,6 +40,7 @@ const Filter = () => {
                     />
                     <SwitchAddressButton type='button' onClick={(e)=>{switchAddress(e)}}/>
                     <CustomInput
+                        style={{transform:'translateX(-5px)'}}
                         id='addressTo'
                         list='addressToList'
                         placeholder="Basic usage"

@@ -4,7 +4,7 @@ import Filter from "@/4-widgets/filter/Filter.tsx";
 
 export const OrdersPage: FC = () => {
     return (
-        <div style={{marginTop:'15px',display:'flex', gap:'15px', alignItems:'center', flexDirection:'column',width:'100%', height:'100vh'}}>
+        <div style={{paddingTop:'15px',display:'flex', gap:'15px', alignItems:'center', flexDirection:'column',width:'100%', height:"100vh", overflow:'hidden'}}>
             <Filter/>
             <OrdersList/>
         </div>
