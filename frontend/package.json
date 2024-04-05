@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "homepage": "https://kilolua.github.io/ReactJS-Redux-Toolkit-TanStack-Query-Axios-Styled-Components-Ant-Design-Formik-Yup-faker-js/",
+  "homepage": "https://kilolua.github.io/simple-fsd-project",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
